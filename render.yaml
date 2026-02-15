@@ -1,7 +1,9 @@
 services:
   - type: web
-    name: kosta-likes
-    env: python
+    name: zakaria-outfit
+    runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
-    plan: free
+    envVars:
+      - key: MAIN_KEY
+        value: CTX-TEAM
